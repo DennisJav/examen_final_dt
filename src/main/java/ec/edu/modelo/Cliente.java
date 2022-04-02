@@ -24,18 +24,20 @@ public class Cliente {
 	@Column(name = "clie_nombre")
 	private String nombreCliente;
 	
+	
 	//relacion
 	@OneToMany(mappedBy = "cliente",cascade=CascadeType.ALL) //FECTH CARGA A LOS HIJOS LOS PRECARGA
-	private List<Vuelo> vuelo;
+	private List<CompraPasaje> compraPasajes;
 	
 	
-	public List<Vuelo> getVuelo() {
-		return vuelo;
+
+	
+	public List<CompraPasaje> getCompraPasajes() {
+		return compraPasajes;
 	}
-	public void setVuelo(List<Vuelo> vuelo) {
-		this.vuelo = vuelo;
+	public void setCompraPasajes(List<CompraPasaje> compraPasajes) {
+		this.compraPasajes = compraPasajes;
 	}
-	
 	//metodos set y get
 	public Integer getId() {
 		return id;

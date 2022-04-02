@@ -28,9 +28,11 @@ public class Vuelo {
 	@Column(name = "vuel_numero")
 	private Integer numeroVuelo;
 	@Column(name = "vuel_fecha_vuelo")
-	private LocalDateTime fechaVuelo;
+	private String fechaVuelo;
 	@Column(name = "vuel_asientos_disponibles")
 	private BigDecimal asientosDisponibles;
+	@Column(name = "vuel_asientos_ocupados")
+	private BigDecimal asientosOcupados;
 	@Column(name = "vuel_origen")
 	private String origen;
 	@Column(name = "vuel_destino")
@@ -73,6 +75,12 @@ public class Vuelo {
 	public String getCategoria() {
 		return categoria;
 	}
+	public BigDecimal getAsientosOcupados() {
+		return asientosOcupados;
+	}
+	public void setAsientosOcupados(BigDecimal asientosOcupados) {
+		this.asientosOcupados = asientosOcupados;
+	}
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	} 
@@ -89,10 +97,10 @@ public class Vuelo {
 	public void setNumeroVuelo(Integer numeroVuelo) {
 		this.numeroVuelo = numeroVuelo;
 	}
-	public LocalDateTime getFechaVuelo() {
+	public String getFechaVuelo() {
 		return fechaVuelo;
 	}
-	public void setFechaVuelo(LocalDateTime fechaVuelo) {
+	public void setFechaVuelo(String fechaVuelo) {
 		this.fechaVuelo = fechaVuelo;
 	}
 	public BigDecimal getAsientosDisponibles() {
