@@ -47,7 +47,7 @@ public class VueloRepoImpl implements IVueloRepo{
 	}
 
 	@Override
-	public List<Vuelo> buscarVueloEstado(String origen, String destino, LocalDateTime fechaVuelo) {
+	public List<Vuelo> buscarVueloEstado(String origen, String destino, String fechaVuelo) {
 		// TODO Auto-generated method stub
 		TypedQuery<Vuelo> miTypedQuery = this.entityManager
 				.createQuery("select v from Vuelo v where v.origen = :valoruno AND v.destino = :valordos AND v.fechaVuelo = :valortres",Vuelo.class);

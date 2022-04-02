@@ -11,6 +11,6 @@ public interface IVueloService {
 	void actualizarVuelo(Vuelo vuelo);
 	Vuelo buscarVuelo(Integer id);
 	void eliminarVuelo(Integer id);
-	List<Vuelo> buscarVueloEstado(String origen, String Destino, LocalDateTime fechaVuelo);
+	List<Vuelo> buscarVueloEstado(String origen, String Destino, String fechaVuelo);
 	Vuelo buscarVueloNumero(Integer numero);
 }

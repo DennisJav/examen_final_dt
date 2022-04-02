@@ -40,7 +40,7 @@ public class VueloServiceImpl implements IVueloService{
 	}
 
 	@Override
-	public List<Vuelo> buscarVueloEstado(String origen, String destino, LocalDateTime fechaVuelo) {
+	public List<Vuelo> buscarVueloEstado(String origen, String destino, String fechaVuelo) {
 		// TODO Auto-generated method stub
 		return this.vueloRepo.buscarVueloEstado(origen, destino, fechaVuelo);
 	}
